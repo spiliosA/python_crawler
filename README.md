@@ -1,5 +1,6 @@
 # python_crawler
 simple web crawler written in python
+* execute with python 2.7 *
 
 recursively iterates through internal links and prints out a dictionary of the following format :
 ```javascript
