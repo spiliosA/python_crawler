@@ -2,7 +2,7 @@
 simple web crawler written in python
 
 recursively iterates through internal links and prints out a dictionary of the following format :
-
+```json
 {
   link1 : 
     internal_links : {}
@@ -14,3 +14,4 @@ recursively iterates through internal links and prints out a dictionary of the f
     images         : {}
   ...
   }
+```
