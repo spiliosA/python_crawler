@@ -39,7 +39,7 @@ class MyHTMLParser(HTMLParser):
 
 # parses a url, populate the images and external_urls lists and return internal url list
 #
-def get_links(url):
+def parse_url(url):
 	global images
 	global external_urls
 
@@ -77,9 +77,8 @@ def split_urls(url_list) :
 
 # parse recursively through urls
 #
-def parse(url) :
-
-	for child_url in get_links(url) :
+def generate_map(url) :
+	for child_url in parse_url(url) :
 		# exclude parent-child combinations in order to avoid infinite loop
 		if [url,child_url] not in parsed_urls :
 			parsed_urls.append([url,child_url])
@@ -105,7 +104,7 @@ def print_map() :
 
 # main call
 #
-root = ''
-parse(root)
 
+generate_map('')
+print_map()
 
