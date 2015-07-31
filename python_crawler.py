@@ -86,7 +86,7 @@ def generate_map(url) :
 			if url not in internal_urls:
 				internal_urls[url] = list()
 			internal_urls[url].append(child_url)
-			parse(child_url)
+			generate_map(child_url)
 
 
 # print the output
